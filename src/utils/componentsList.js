@@ -173,6 +173,20 @@ export default [
         }
     },
     {
+        name: 'Image Card',
+        slug:'bImage-card',
+        icon: 'mdi-card-bulleted-outline',
+        file: 'imageCardProps',
+        props: {
+            content: {
+                img: '',
+                title: '',
+                link: '',
+                description: ''
+            }
+        }
+    },
+    {
         name: 'Custom Section',
         slug: 'bCustomSection',
         icon: 'mdi-focus-field',

@@ -27,6 +27,10 @@
             <div class="builder">
                 <elements-loader :elements="pageData.content.elements"></elements-loader>
             </div>
+            <v-divider class="mt-10 mb-10"></v-divider>
+            <div>
+                <page-meta :metaData="pageData.content.metaData"></page-meta>
+            </div>
         </v-container>
     </div>
 </template>
@@ -34,9 +38,11 @@
 <script>
     import elementsLoader from "./builder/elementsLoader";
     import user from "../../../utils/user";
+    import pageMeta from "./metaData/pageMeta";
     export default {
         name: "pageForm",
         components: {
+            pageMeta,
           elementsLoader
         },
         data() {
@@ -45,7 +51,11 @@
                     title: '',
                     slug: '',
                     content: {
-                        elements: []
+                        elements: [],
+                        metaData: {
+                            titleTag: '',
+                            metaDescription: ''
+                        }
                     }
                 },
                 loader: false

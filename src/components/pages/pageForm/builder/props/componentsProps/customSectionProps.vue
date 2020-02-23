@@ -20,7 +20,7 @@
                 <label class="mb-3">Slug: </label>
                 <v-text-field
                         v-model="props.content.slug"
-                        label="Name"
+                        label="Slug"
                         solo
                 ></v-text-field>
             </div>

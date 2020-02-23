@@ -6,7 +6,7 @@
                     class="pa-5 ma-3 components-header"
                     color="#F8FDFF "
             >
-                <div class="element-header d-flex align-center">
+                <div class="element-header d-flex align-center" @click="editComp(comp)">
                     <h5>{{comp.name}}</h5>
                     <v-spacer></v-spacer>
                     <v-icon small @click="editComp(comp)">mdi-file-edit</v-icon>

@@ -55,7 +55,7 @@
             return {
                 items: [
                     { title: 'Pages', icon: 'mdi-file-document-box-multiple', link:'/' },
-                    { title: 'Modules', icon: 'mdi-view-module', link:'/modules' },
+                    { title: 'Modules', icon: 'mdi-view-module', link:'/module-configuration-list' },
                     { title: 'Styling', icon: 'mdi-brush', link:'/styling' },
                     { title: 'Search Engine', icon: 'mdi-card-search', link:'/seo' },
                     { title: 'Header', icon: 'mdi-page-layout-header', link:'/seo' },

@@ -6,8 +6,10 @@ import Home from './views/Home.vue'
 import About from './views/About.vue'
 import pagesList from "./components/pages/pagesList"
 import pageForm from "./components/pages/pageForm/pageForm"
-import moduleConfigurationList from "./components/modules/modulesConfiguration/moduleConfigurationList";
+import moduleConfigurationList from "./components/modules/moduleConfigurationList";
 import moduleConfigurationForm from "./components/modules/modulesConfiguration/moduleConfigurationForm/moduleConfigurationForm";
+import moduleElementsList from "./components/modules/modulesElements/moduleElementsList";
+import moduleElementsForm from "./components/modules/modulesElements/moduleElementsForm";
 Vue.use(Router)
 
 const router = new Router({
@@ -40,6 +42,18 @@ const router = new Router({
       path: '/module-configuration-form',
       name: 'Module Configuration Form',
       component: moduleConfigurationForm,
+      meta: { layout: 'default'}
+    },
+    {
+      path: '/module-elements-list',
+      name: 'module-elements-list',
+      component: moduleElementsList,
+      meta: { layout: 'default'}
+    },
+    {
+      path: '/module-elements-form',
+      name: 'module-elements-form',
+      component: moduleElementsForm,
       meta: { layout: 'default'}
     },
   ]

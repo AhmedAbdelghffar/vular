@@ -21,8 +21,10 @@
                                 <!--                              <p class="grey&#45;&#45;text">Last edited by <span class="black&#45;&#45;text">{{module.content.lastEdit}}</span></p>-->
                             </div>
                         </div>
-                        <div>
-                            <v-btn color="primary" @click="$router.push({path: '/module-configuration-form',query: {action: 'update',id: module.id}})" block>Manage</v-btn>
+                        <div class="d-flex">
+                            <v-btn color="primary" @click="$router.push({path: '/module-configuration-form',query: {action: 'update',id: module.id}})">Configure</v-btn>
+                            <v-spacer></v-spacer>
+                            <v-btn color="primary"  @click="$router.push({path: '/module-elements-list',query: {action: 'update',id: module.id}})" >Edit Data</v-btn>
                         </div>
                     </v-card>
                 </v-col>
@@ -43,7 +45,7 @@
 </template>
 
 <script>
-    import user from "../../../utils/user";
+    import user from "../../utils/user";
     export default {
         name: "modulesList",
         data() {

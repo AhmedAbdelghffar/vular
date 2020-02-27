@@ -90,6 +90,13 @@
                             moduleId: null,
                             multiple: false
                         }
+                    },
+                    {
+                        name: 'Repeater',
+                        slug: 'vRepeater',
+                        options: {
+                            fields: []
+                        }
                     }
                 ],
             }

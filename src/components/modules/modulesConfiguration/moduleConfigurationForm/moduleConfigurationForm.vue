@@ -1,5 +1,5 @@
 <template>
-    <div class="modules-confuration-list page-screen">
+    <div class="modules-configuration-list page-screen">
         <v-container fluid>
             <v-row>
                 <v-col cols="4">
@@ -24,32 +24,20 @@
                     </v-btn>
                 </v-col>
             </v-row>
-            <div class="field-group">
-                <div
-                    v-for="(field, index) in moduleConfiguration.conf.fields"
-                    class="mt-5"
-                >
-                    <v-card class="pa-5" color="#eee">
-                        <div class="d-flex">
-                            <v-spacer></v-spacer>
-                            <v-icon small @click="deleteField(index)">delete</v-icon>
-                        </div>
-                        <field-settings :fieldSettings="field"></field-settings>
-                    </v-card>
-                </div>
-                <v-btn block elevation="0" @click="addField" class="mt-5"> <v-icon>mdi-plus</v-icon>Add Field</v-btn>
-            </div>
+            <fields :fields="moduleConfiguration.conf.fields"></fields>
         </v-container>
     </div>
 </template>
 
 <script>
     import fieldSettings from "./fieldSettings";
+    import fields from "./fields";
     import user from "../../../../utils/user";
     export default {
         name: "moduleConfigurationForm",
         components: {
-            fieldSettings
+            fieldSettings,
+            fields
         },
         data(){
             return {
@@ -104,17 +92,6 @@
                             user.logOut()
                         }
                     })
-            },
-            addField() {
-                this.moduleConfiguration.conf.fields.push({
-                    name: 'New Field',
-                    key: '',
-                    type: 'vTextField',
-                    options: {}
-                })
-            },
-            deleteField(index) {
-                this.moduleConfiguration.conf.fields.splice(index,1)
             }
         }
     }

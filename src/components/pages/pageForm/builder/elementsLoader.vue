@@ -1,11 +1,12 @@
 <template>
     <div class="elements-loader">
-        <div class="pa-4 builder-elements">
+        <div class="builder-elements">
             <draggable v-model="elements" group="sections" @start="drag=true" @end="drag=false" handle=".section-header">
                 <v-card
-                        class="pa-5 mt-5"
-                        elevation="1"
+                        class="pa-5 mb-5"
                         v-for="(element,elementIndex) in elements"
+                        outlined
+                        elevation="0"
                 >
                     <div class="element-header section-header d-flex align-center">
                         <p class="mb-0">Section</p>
@@ -92,9 +93,6 @@
 </script>
 
 <style scoped>
-    .builder-elements {
-        background: #eee;
-    }
     .theme--light.v-btn.v-btn--disabled:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
         background: transparent !important;
     }

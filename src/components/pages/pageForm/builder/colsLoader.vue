@@ -8,7 +8,8 @@
                  >
                     <v-card
                             class="pa-2 mt-3"
-                            elevation="1"
+                            outlined
+                            elevation="0"
                             color="#F8F8F8"
                     >
                         <div class="element-header col-header d-flex align-center">

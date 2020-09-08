@@ -24,9 +24,9 @@ export default {
 </script>
 
 <style>
-  @import "style/vuetify-reset.scss";
-  @import "style/inputs.scss";
-  @import "style/builder.scss";
+  @import "styles/vuetify-reset.scss";
+  @import "styles/inputs.scss";
+  @import "styles/builder.scss";
   .v-content {
     padding-top: 70px !important;
   }

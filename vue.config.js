@@ -1,5 +1,4 @@
 module.exports = {
-  lintOnSave: false,
   pluginOptions: {
     i18n: {
       locale: 'en',
@@ -11,7 +10,7 @@ module.exports = {
   css: {
     loaderOptions: {
       scss: {
-        prependData: `@import "@/style/_variables.scss";`
+        prependData: `@import "@/styles/_variables.scss";`
       }
     }
   }

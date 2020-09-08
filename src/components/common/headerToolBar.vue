@@ -1,5 +1,5 @@
 <template>
-    <v-app-bar fixed id="main-header" color="white">
+    <v-app-bar fixed id="main-header" color="primary" dark>
         <v-icon @click="toggleDrawer">menu</v-icon>
 
         <v-toolbar-title class="">BLUE CMS</v-toolbar-title>

@@ -5,6 +5,9 @@
             v-model="drawerToggle"
             mobile-break-point="991"
             width="200"
+            expand-on-hover
+            mini-variant
+            color="#232b2b"
             dark
     >
         <v-list-item>
@@ -54,7 +57,7 @@
         data () {
             return {
                 items: [
-                    { title: 'Pages', icon: 'mdi-file-document-box-multiple', link:'/' },
+                    { title: 'Pages', icon: 'mdi-file-document-multiple', link:'/' },
                     { title: 'Modules', icon: 'mdi-view-module', link:'/module-configuration-list' },
                     { title: 'Styling', icon: 'mdi-brush', link:'/styling' },
                     { title: 'Search Engine', icon: 'mdi-card-search', link:'/seo' },

@@ -2,35 +2,38 @@
     <div class="page-list page-screen">
         <v-container fluid>
             <v-row>
-                <v-col cols="4">
-                    <v-text-field
-                        v-model="pageData.title"
-                        placeholder="Page Title"
-                        solo
-                    >
-                    </v-text-field>
+                <v-col cols="9">
+                    <v-row>
+                        <v-col cols="5" class="pt-0">
+                            <v-text-field
+                              v-model="pageData.title"
+                              placeholder="Page Title"
+                              solo
+                            >
+                            </v-text-field>
+                        </v-col>
+                        <v-col cols="5" class="pt-0">
+                            <v-text-field
+                              v-model="pageData.slug"
+                              placeholder="Page URL"
+                              solo
+                            >
+                            </v-text-field>
+                        </v-col>
+                        <v-col cols="2" class="pt-0">
+                            <v-btn color="primary" :loading="loader"  block height="48" @click="submitPage" >
+                                {{$route.query.action}}
+                            </v-btn>
+                        </v-col>
+                    </v-row>
+                    <div class="builder">
+                        <elements-loader :elements="pageData.content.elements"></elements-loader>
+                    </div>
                 </v-col>
-                <v-col cols="4">
-                    <v-text-field
-                            v-model="pageData.slug"
-                            placeholder="Page URL"
-                            solo
-                    >
-                    </v-text-field>
-                </v-col>
-                <v-col>
-                    <v-btn color="primary" :loading="loader" class="elevation-5" block height="48" @click="submitPage">
-                        {{$route.query.action}}
-                    </v-btn>
+                <v-col cols="3">
+                    <page-meta :metaData="pageData.content.metaData"></page-meta>
                 </v-col>
             </v-row>
-            <div class="builder">
-                <elements-loader :elements="pageData.content.elements"></elements-loader>
-            </div>
-            <v-divider class="mt-10 mb-10"></v-divider>
-            <div>
-                <page-meta :metaData="pageData.content.metaData"></page-meta>
-            </div>
         </v-container>
     </div>
 </template>
@@ -53,8 +56,11 @@
                     content: {
                         elements: [],
                         metaData: {
-                            titleTag: '',
-                            metaDescription: ''
+                           seo: {
+                               titleTag: '',
+                               metaDescription: '',
+                               allowIndexing: true
+                           }
                         }
                     }
                 },

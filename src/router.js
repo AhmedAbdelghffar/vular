@@ -1,15 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import store from './store'
-import Login from './views/Login'
-import Home from './views/Home.vue'
-import About from './views/About.vue'
-import pagesList from "./components/pages/pagesList"
-import pageForm from "./components/pages/pageForm/pageForm"
-import moduleConfigurationList from "./components/modules/moduleConfigurationList";
-import moduleConfigurationForm from "./components/modules/modulesConfiguration/moduleConfigurationForm/moduleConfigurationForm";
-import moduleElementsList from "./components/modules/modulesElements/moduleElementsList";
-import moduleElementsForm from "./components/modules/modulesElements/moduleElementsForm";
+import Login from './components/user/Login'
+import dashboard from "./components/views/dashboard/dashboard";
+import pagesList from "./components/views/pageBuilder/pagesList"
+import pageForm from "./components/views/pageBuilder/pageForm/pageForm"
+import moduleConfigurationList from "./components/views/modules/moduleConfigurationList";
+import moduleConfigurationForm from "./components/views/modules/modulesConfiguration/moduleConfigurationForm/moduleConfigurationForm";
+import moduleElementsList from "./components/views/modules/modulesElements/moduleElementsList";
+import moduleElementsForm from "./components/views/modules/modulesElements/moduleElementsForm";
 Vue.use(Router)
 
 const router = new Router({
@@ -22,12 +21,18 @@ const router = new Router({
     },
     {
       path: '/',
-      name: 'Page List',
-      component: pagesList,
-      meta: { layout: 'default'}
+      name: 'Dashboard',
+      component: dashboard,
+      meta: { layout: 'default'},
     },
     {
-      path: '/page-form',
+      path: '/pages',
+      name: 'Page List',
+      component: pagesList,
+      meta: { layout: 'default'},
+    },
+    {
+      path: '/pages/page-form',
       name: 'Page Form',
       component: pageForm,
       meta: { layout: 'default'}

@@ -1,0 +1,69 @@
+
+
+//slide
+.slide-enter-active{
+  animation: slide-in 500ms ease-out forwards;
+}
+
+.slide-leave-active{
+  animation: slide-out 500ms ease-out forwards;
+}
+@keyframes slide-in {
+  from{
+    transform: translateY(-30px);
+    opacity:0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out {
+  from{
+    transform: translateY(0);
+    opacity:1;
+  }
+  to{
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+}
+
+//zoom
+.zoom-enter-active,
+.zoom-leave-active {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-name: zoom;
+}
+
+.zoom-leave-active {
+  animation-direction: reverse;
+}
+
+@keyframes zoom {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+//fade
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration: 0.3s;
+  transition-property: height, opacity;
+  transition-timing-function: ease;
+  overflow: hidden;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0
+}

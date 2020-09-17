@@ -10,7 +10,7 @@
             </v-card-title>
             <v-card class="pa-5 pl-10">
                 <v-btn-toggle @change="addIcon" v-model="icon" class="row ma-0">
-                    <v-btn width="320" class="text-center" v-for="icon in icons" :value="icon.name">
+                    <v-btn width="320" class="text-center" v-for="(icon,index) in icons" :value="icon.name" :key="index">
                         <i :class="`mdi mdi-${icon.name}`"></i>
                         <p class="mb-0 mr-3">
                             {{icon.name}}

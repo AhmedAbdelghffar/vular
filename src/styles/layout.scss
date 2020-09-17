@@ -1,0 +1,27 @@
+//content
+.v-main {
+  padding-top: 70px !important;
+}
+
+//header
+#main-header {
+  z-index: 100;
+}
+
+//side bar
+.v-navigation-drawer--fixed {
+  height: 94vh !important;
+  top: 64px !important;
+}
+.v-navigation-drawer {
+  padding-top: 22px;
+}
+.v-list .v-list-item--active {
+  background-color: var(--v-primary-base) !important;
+  color: white;
+}
+.theme--dark.v-list-item--active:hover::before, .theme--dark.v-list-item--active::before {
+  opacity: 0;
+}
+
+

@@ -1,8 +1,7 @@
 export const helpers = {
     state: {
         snackbarMessage:'',
-        loader: false,
-        logo: ''
+        loader: false
     },
     mutations: {
         SET_SNACKBAR_MESSAGE (state,snackbarMessage) {
@@ -13,9 +12,6 @@ export const helpers = {
         },
         SET_LOADER(state,loader) {
             state.loader = loader
-        },
-        SET_LOGO(state,logo) {
-            state.logo = logo
         }
     },
     actions: {
@@ -24,9 +20,6 @@ export const helpers = {
         },
         setLoader({commit},loader) {
             commit('SET_LOADER', loader)
-        },
-        setLogo({commit},logo) {
-            commit('SET_LOGO', logo)
         }
     }
 }

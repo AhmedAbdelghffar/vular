@@ -41,7 +41,7 @@
             validation: {
                 type: Boolean,
                 default: ()=>{
-                    return true
+                    return false
                 }
             }
         },
@@ -129,84 +129,6 @@
     }
 </script>
 
-<style lang="scss">
-    .image-uploader {
-        max-width: 270px;
-        height: 200px;
-        border: solid 1px rgba(151, 151, 151, 0.26);
-        position: relative;
-        img {
-            width: 100% !important;
-            object-fit: cover !important;
-            height: 100%;
-            max-width: 100%;
-        }
-        .upload-image {
-            position: absolute;
-            left: 0;
-            width: 100%;
-            text-align: center;
-            top: 50%;
-            transform: translate(0,-50%);
-            cursor: pointer;
-        }
-        .replace-image {
-            cursor: pointer;
-            position: absolute;
-            left: 0;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 30%;
-            color: white;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(17, 17, 17, .5);
-            display: none;
-            transition: all .5s ease;
-        }
-        &:hover .replace-image {
-            display: flex;
-        }
-        .dz-remove {
-            display: none;
-        }
-        .dz-default{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            cursor: pointer;
-            z-index: 4;
-            padding-bottom: 50px;
-            width: 100%;
-            text-align: center;
-        }
-        &:hover .dz-default {
-            display: block;
-        }
+<style lang="scss" src="../../styles/components/dropZone.scss" scoped>
 
-    }
-
-    .smallImageUploader {
-        width: 150px;
-        max-width: 100%;
-        height: 120px;
-        border: none;
-        position: relative;
-        border-radius: 20px;
-        background: #EBF7FF;
-        img {
-            width: 100% !important;
-            height: 120px !important;
-            object-fit: contain !important;
-            max-width: 100%;
-        }
-    }
-
-
-    .uploaded .dz-default{
-        color: white;
-        display: none;
-    }
 </style>

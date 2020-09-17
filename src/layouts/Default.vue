@@ -2,26 +2,29 @@
   <div>
     <header-tool-bar @toggleDrawer="drawer = !drawer"></header-tool-bar>
     <sidebar :drawer="drawer"/>
-    <v-content>
+    <v-main>
       <slot />
-    </v-content>
+    </v-main>
     <page-loader></page-loader>
     <snackbar-message></snackbar-message>
+    <style-configuration></style-configuration>
   </div>
 </template>
 
 <script>
-    import sidebar from '../components/common/sidebar'
-    import headerToolBar from '../components/common/headerToolBar'
+    import sidebar from '../components/layouts/sidebar'
+    import headerToolBar from '../components/layouts/headerToolBar'
     import pageLoader from '../components/common/loader'
     import snackbarMessage from '../components/common/snackBar'
+    import styleConfiguration from "../components/layouts/styleConfiguration";
     export default {
         name: "Default",
         components: {
           sidebar,
           headerToolBar,
           pageLoader,
-          snackbarMessage
+          snackbarMessage,
+          styleConfiguration
         },
         data () {
           return {

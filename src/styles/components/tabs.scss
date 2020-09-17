@@ -1,0 +1,27 @@
+
+.v-tabs {
+  margin: 10px 0;
+  .v-tab {
+    border-radius: 5px;
+    margin: 0 10px;
+    background: #eee;
+  }
+  .v-tab--active {
+    background-color:var(--v-primary-base);
+    color: white !important;
+  }
+  .v-tabs-slider {
+    display: none;
+  }
+}
+
+.v-window__container--is-active {
+  height: 100% !important;
+  transition: .5s ease;
+}
+
+.v-tabs-items {
+  padding: 20px;
+}
+
+

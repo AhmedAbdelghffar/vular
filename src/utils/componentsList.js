@@ -78,7 +78,7 @@ export default [
                 text: 'Title',
             },
             style: {
-                textColor: store.state.style.titleColor,
+                textColor: '#333',
                 fontSize: '',
                 lineHeight: '',
                 fontWeight: '',

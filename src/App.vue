@@ -1,7 +1,9 @@
 <template>
-  <v-app>
+  <v-app dark>
     <component :is="layout">
-      <router-view/>
+      <transition :name="$store.state.style.routerAnimations" mode="out-in">
+        <router-view/>
+      </transition>
     </component>
   </v-app>
 </template>
@@ -24,10 +26,5 @@ export default {
 </script>
 
 <style>
-  @import "styles/vuetify-reset.scss";
-  @import "styles/inputs.scss";
-  @import "styles/builder.scss";
-  .v-content {
-    padding-top: 70px !important;
-  }
+
 </style>

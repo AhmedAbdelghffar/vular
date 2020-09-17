@@ -8,7 +8,11 @@ export default new Vuetify({
     iconfont: 'mdi',
   },
   theme: {
+    options: {
+      customProperties: true
+    },
     themes: {
+
       light: {
         primary: '#1976D2',
         secondary: '#363636'

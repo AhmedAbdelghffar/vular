@@ -5,6 +5,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import tinymce from 'vue-tinymce-editor'
+import './mainStyle.scss'
 
 // sync localstorage with store
 import lsSync from './utils/lsSync'

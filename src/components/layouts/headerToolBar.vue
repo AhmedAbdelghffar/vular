@@ -2,7 +2,7 @@
     <v-app-bar fixed id="main-header" color="primary" dark elevation="1">
         <v-icon @click="toggleDrawer">menu</v-icon>
 
-        <v-toolbar-title class="">BLUE CMS</v-toolbar-title>
+        <v-toolbar-title class=""><img :height="30" src="../../assets/logo.png" alt=""></v-toolbar-title>
 
         <v-spacer></v-spacer>
 

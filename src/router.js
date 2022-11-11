@@ -66,12 +66,6 @@ const router = new Router({
 
 router.beforeEach((to, from, next) => {
   // redirect to login page if not logged in and trying to access a restricted page
-  if (!store.state.user.userToken && to.path !== '/login') {
-    return next('/login');
-  }
-  if (store.state.user.userToken && to.path === '/login') {
-    return next('/');
-  }
 
   next();
 })

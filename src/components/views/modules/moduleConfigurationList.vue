@@ -19,7 +19,6 @@
                         <div class="module-list-card">
                             <div>
                                 <h3>{{module.name}}</h3>
-                                <!--                              <p class="grey&#45;&#45;text">Last edited by <span class="black&#45;&#45;text">{{module.content.lastEdit}}</span></p>-->
                             </div>
                         </div>
                         <div class="d-flex">
@@ -70,6 +69,7 @@
                         if (error.response.status === 403 || error.response.status) {
                             user.logOut()
                         }
+                      this.$store.dispatch('setLoader', false)
                     })
             },
             cloneModule (module) {

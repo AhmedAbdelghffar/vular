@@ -1,4 +1,8 @@
-# vue-dashboard-boilerplate
+# Vular
+
+```
+Vue 2 CMS
+```
 
 ## Project setup
 ```
